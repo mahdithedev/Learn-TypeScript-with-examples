@@ -41,24 +41,3 @@ console.log(point3.z) // this is ok
 function getName() : string {
     return "Amir Mahdi"
 }
-
-// const myName : string = getName() as number => error
-// onversion of type 'string' to type 'number' may be a mistake
-// because neither type sufficiently overlaps with the other.
-// If this was intentional, convert the expression to 'unknown' first.
-
-//-----------------------------------------------
-
-// ES2015/ES6/ECMAscript2015/etc version
-
-// note: es2015 code will be compiled to older versions of ecmascript
-// you can change this behavior with the "--target es6" flag
-
-const es2015getPointInSpace = () : Point => {
-    const point3d : Point3d = {x:16 , y:16 , z:16}  
-    return point3d
-}
-
-const es2015getName = () : string => {
-    return "Amir Mahdi"
-}

@@ -128,39 +128,3 @@ function liveDangerously(x?: number | null) {
 // Just like other type assertions,
 // this doesn’t change the runtime behavior of your code,
 // so it’s important to only use ! when you know that the value can’t be null or undefined.
-
-//-----------------------------------------------
-
-// ES2015/ES6/ECMAscript2015/etc version
-
-// note: es2015 code will be compiled to older versions of ecmascript
-// you can change this behavior with the "--target es6" flag
-
-const es2015initlize = (options : Options | "auto") => {
-  //...
-}
-
-const es2015compare = (a: string, b: string): -1 | 0 | 1 => {
-  return a === b ? 0 : a > b ? 1 : -1;
-}
-
-const es2015isBigger = (a : number , b : number) : true | false => {
-  return a > b
-}
-
-const es2015move = ( direction : "Left" | "Right" | "Top" | "Bottom") => {
-  console.log(`i moved in the ${direction} direction`)
-}
-
-const es2015doSomething = (x: string | null) => {
-  if (x === null) {
-    // do nothing
-  } else {
-    console.log("Hello, " + x.toUpperCase());
-  }
-}
-
-const es2015liveDangerously = (x?: number | null) => {
-  // No error
-  console.log(x!.toFixed());
-}

@@ -37,25 +37,5 @@ function printId(id : ID) {
     console.log(printId)
 }
 
-//-----------------------------------------------
+// Generics with interfaces and type aliases
 
-// ES2015/ES6/ECMAscript2015/etc version
-
-// note: es2015 code will be compiled to older versions of ecmascript
-// you can change this behavior with the "--target es6" flag
-
-const es2015printPoint1 = (pt : {x:number , y : number}) => {
-    console.log(`Point(${pt.x},${pt.y})`)
-}
-
-const es2015printPoint2 = (pt : Point) => {
-    console.log(`Point${pt.x}${pt.y}`)
-}
-
-const es2015getPointObject = (x : number , y : number) : Point => {
-    return {x,y}
-}
-
-const es2015printId = (id : ID) => {
-    console.log(printId)
-}

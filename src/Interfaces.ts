@@ -57,22 +57,8 @@ type ExtendedType = BaseType & {
     varible2:number,
 }
 
-//-----------------------------------------------
+// interface type checking
 
-// ES2015/ES6/ECMAscript2015/etc version
-
-// note: es2015 code will be compiled to older versions of ecmascript
-// you can change this behavior with the "--target es6" flag
-
-const es2015printPoint = (pt : Point) => {
-    console.log(`Point${pt.x}${pt.y}`)
+function isInstanceOfBaseType(obj : Object) : Boolean {
+    return "varible1" in obj
 }
-
-const es2015getPointObject = (x : number , y : number) : Point => {
-    return {x,y}
-}
-
-const es2015test = () : ExtendedInterface => {
-    return {varible1:"hello" , varible2:"world"}
-}
-
