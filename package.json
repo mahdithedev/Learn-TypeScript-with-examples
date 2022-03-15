@@ -1,0 +1,12 @@
+{
+  "name": "learning-typescript-with-examples",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Amir Mahdi",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.4.3"
+  },
+  "type": "module",
+  "keywords": ["typescript" , "typescript examples" , "learning typescript with example" , "typescript tutorial"]
+}
