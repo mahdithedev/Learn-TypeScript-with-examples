@@ -22,7 +22,15 @@ const stringArrayGenerics : Array<string> = ["this" , "is" , "a" , "string" , "a
 //number array using generics
 const numberArrayGenerics : Array<number> = [1,2,3,4]
 
-//you can see more about generitcs in the generics.ts file
+//you can see more about generics in the generics.ts file
+
+// read only array
+
+const myArray : ReadonlyArray<number> = [1,2,3]
+
+console.log(myArray[0]) // ok
+// myArray.push(12) Property 'push' does not exist on type 'readonly number[]'.
+// myArray[2] = 3 Index signature in type 'readonly number[]' only permits reading.
 
 //Tuple Type
 // TypeScript gives us a data type called tuple that helps to achieve such a purpose.
@@ -31,3 +39,7 @@ const numberArrayGenerics : Array<number> = [1,2,3,4]
 //  Tuples can also be passed as parameters to functions.
 
 const tuple : [number , number , number] = [1,2,3] // this is a tuple
+
+const readOnlyTuple : readonly [number , number , number] = [1,2,3]
+
+// readOnlyTuple[2] = 3 Cannot assign to '2' because it is a read-only property.

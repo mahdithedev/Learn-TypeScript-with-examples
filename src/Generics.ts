@@ -204,3 +204,62 @@ function createPair<T,U>(first : T , second : U) : Pair<T,U> {
 
 //Guidelines for Writing Good Generic Functions
 //https://www.typescriptlang.org/docs/handbook/2/functions.html#guidelines-for-writing-good-generic-functions
+
+
+// Class Generics
+
+// see Classes.ts for more detail about clasess
+
+class MyClass<T> {
+    
+    public field : T
+
+    constructor(field : T) {
+        this.field = field
+    }
+
+    get Field() : T {
+        return this.field
+    }
+
+}
+
+// an actual example
+
+class MyPair<T,U> {
+
+    private pair : [T | undefined , U | undefined]
+
+    get first() : T {
+        return this.pair[0]
+    }
+
+    get second() : U {
+        return this.pair[1]
+    }
+
+    set first(newFirst : T) {
+        this.first = newFirst
+    }
+
+    set second(newSecond : U) {
+        this.second = newSecond
+    }
+
+    constructor()
+    constructor(pair : [T,U])
+    constructor(first : T)
+    constructor(second : U)
+    constructor(pair? : [T,U] , first? : T , second? : U) {
+        if(pair) {
+            this.pair = pair
+        }
+        else if(first) {
+            this.pair[0] = first
+        }
+        else if(second) {
+            this.pair[1] = second
+        }
+    }
+
+}
