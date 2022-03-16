@@ -7,6 +7,5 @@
   "dependencies": {
     "typescript": "^4.4.3"
   },
-  "type": "module",
   "keywords": ["typescript" , "typescript examples" , "learning typescript with example" , "typescript tutorial"]
 }

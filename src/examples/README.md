@@ -1,0 +1,1 @@
+if you haven't read the other files yet go read them and then come back (start with Basics.ts)

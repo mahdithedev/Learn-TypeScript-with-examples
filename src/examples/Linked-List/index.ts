@@ -58,5 +58,3 @@ class LinkedList<T> {
 
 const l = new LinkedList<string>("Head node")
 l.insert("Second node" , 0)
-
-console.log(l.head)
